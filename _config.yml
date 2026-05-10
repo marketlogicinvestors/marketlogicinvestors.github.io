@@ -1,0 +1,81 @@
+title: Investments Labs
+tagline: Industry theses, VC and PE deal teardowns, and frameworks
+description: >-
+  Investments Labs is the research home of Market Logic Investors LLC.
+  Industry theses, VC and PE deal teardowns, and decision frameworks by Hemanth Reganti.
+author: Hemanth Reganti
+email: hreganti@marketlogic.org
+url: "https://marketlogicinvestors.github.io"
+baseurl: ""
+
+theme: minima
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+
+collections:
+  theses:
+    output: true
+    permalink: /theses/:path/
+  vc:
+    output: true
+    permalink: /vc/:path/
+  pe:
+    output: true
+    permalink: /pe/:path/
+  frameworks:
+    output: true
+    permalink: /frameworks/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: theses
+    values:
+      layout: page
+      section: Industry Theses
+  - scope:
+      path: ""
+      type: vc
+    values:
+      layout: page
+      section: VC Deals
+  - scope:
+      path: ""
+      type: pe
+    values:
+      layout: page
+      section: PE Deals
+  - scope:
+      path: ""
+      type: frameworks
+    values:
+      layout: page
+      section: Frameworks
+
+header_pages:
+  - about.md
+  - theses.md
+  - vc.md
+  - pe.md
+  - frameworks.md
+  - contact.md
+
+minima:
+  skin: classic
+  date_format: "%b %-d, %Y"
+
+footer_text: >-
+  Investments Labs is a personal research site by Hemanth Reganti, Market Logic Investors LLC.
+  Not investment advice. Anonymized case studies derived from public sources.
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .gitignore
+  - README.md
